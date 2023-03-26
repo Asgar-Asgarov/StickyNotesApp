@@ -68,8 +68,10 @@ saveNotes(notes);
     
 }
 
-function deleteNote(id) {
-    console.log("Deleting note...");
-    console.log(id);
+function deleteNote(id,element) {
+    const notes = getNotes().filter((note) => note.id != id);
+
+    saveNotes(notes);
+    App.removeChild(element);
 }
 
