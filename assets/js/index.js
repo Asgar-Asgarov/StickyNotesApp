@@ -54,8 +54,8 @@ function updateNote(id,newContent) {
     
 }
 
-function deleteNote(id,element) {
+function deleteNote(id) {
     console.log("Deleting note...");
-    console.log(id,newContent);
+    console.log(id);
 }
 
