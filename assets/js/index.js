@@ -1,7 +1,13 @@
-window.onload=function(){
- const App = document.getElementById("app");
+
+const App = document.getElementById("app");
 const btnEl = App.querySelector(".addNote");
-}
+
+
+getNotes().forEach((note) => {
+    const noteElement = createNoteElement(note.id, note.content);
+    App.insertBefore(noteElement, btnEl);
+  });
+
 
 // for getting  notes from local storage
 function getNotes() {
