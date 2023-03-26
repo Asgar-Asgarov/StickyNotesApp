@@ -20,7 +20,7 @@ function addNote(params) {
 }
 
 
-function createNoteElement(content) {
+function createNoteElement(id,content) {
     const element = document.createElement("textarea");
 
     element.classList.add("note");
@@ -32,17 +32,24 @@ function createNoteElement(content) {
     });
 
     element.addEventListener("dblclick",()=>{
-
+      const doDelete = confirm("Are you sure to delete this note?");
+      if (doDelete) {
+        deleteNote(id,element)
+      }
+     
     });
 
   return element;
 }
 
 function updateNote(id,newContent) {
-console.log("Updating note...");
-console.log(id,newContent);
+  console.log("Updating note...");
+  console.log(id,newContent);
     
 }
 
-
+function deleteNote(id,element) {
+    console.log("Deleting note...");
+    console.log(id,newContent);
+}
 
