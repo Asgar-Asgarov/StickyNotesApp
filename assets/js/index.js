@@ -15,3 +15,34 @@ function saveNotes(notes) {
 }
 
 
+function addNote(params) {
+    
+}
+
+
+function createNoteElement(content) {
+    const element = document.createElement("textarea");
+
+    element.classList.add("note");
+    element.value=content;
+    element.placeholder="Empty Sticky note";
+
+    element.addEventListener("change",()=>{
+        updateNote(id,element.value)
+    });
+
+    element.addEventListener("dblclick",()=>{
+
+    });
+
+  return element;
+}
+
+function updateNote(id,newContent) {
+console.log("Updating note...");
+console.log(id,newContent);
+    
+}
+
+
+
