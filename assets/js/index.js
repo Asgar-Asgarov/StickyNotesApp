@@ -60,8 +60,11 @@ function createNoteElement(id,content) {
 }
 
 function updateNote(id,newContent) {
-  console.log("Updating note...");
-  console.log(id,newContent);
+const notes=getNotes();
+const targetNotes = notes.filter((note)=>note.id==id)[0];
+
+targetNotes.content = newContent;
+saveNotes(notes);
     
 }
 
