@@ -8,6 +8,7 @@ getNotes().forEach((note) => {
     App.insertBefore(noteElement, btnEl);
   });
 
+btnEl.addEventListener("click",()=>addNote());
 
 // for getting  notes from local storage
 function getNotes() {
@@ -21,8 +22,18 @@ function saveNotes(notes) {
 }
 
 
-function addNote(params) {
-    
+function addNote(id,content) {
+    const notes = getNotes();
+    const noteObject = {
+        id: Math.floor(Math.random()*10000),
+        content:""
+    };
+
+    const noteElement = createNoteElement(noteObject.id,noteObject.content);
+    App.insertBefore(noteElement,btnEl);
+
+    notes.push(noteObject);
+    saveNotes(notes);
 }
 
 
