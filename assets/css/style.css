@@ -22,5 +22,16 @@ body{
 }
 
 .addNote{
+    height: 200px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 120px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 0.2s;
+}
 
+.addNote:hover{
+    background: rgba(0, 0, 0, 0.2);
 }
